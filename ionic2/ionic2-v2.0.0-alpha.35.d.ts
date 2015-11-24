@@ -1,4 +1,6 @@
 
+declare module 'ionic2/ionic2' {
+
 // Source code:
 // components.d.ts
 
@@ -45,47 +47,47 @@
 // Source code:
 // util/dom.d.ts
 
-export declare const raf: any;
-export declare const rafCancel: any;
-export declare function rafPromise(): any;
-export declare function rafFrames(framesToWait: any, callback: any): void;
-export declare let CSS: {};
-export declare function transitionEnd(el: Element): any;
-export declare function animationStart(el: Element, animationName: any): any;
-export declare function animationEnd(el: Element, animationName: any): any;
-export declare function ready(callback: any): any;
-export declare function windowLoad(callback: any): any;
-export declare function pointerCoord(ev: any): {
+export  const raf: any;
+export  const rafCancel: any;
+export  function rafPromise(): any;
+export  function rafFrames(framesToWait: any, callback: any): void;
+export  let CSS: {};
+export  function transitionEnd(el: Element): any;
+export  function animationStart(el: Element, animationName: any): any;
+export  function animationEnd(el: Element, animationName: any): any;
+export  function ready(callback: any): any;
+export  function windowLoad(callback: any): any;
+export  function pointerCoord(ev: any): {
     x: number;
     y: number;
 };
-export declare function hasPointerMoved(threshold: any, startCoord: any, endCoord: any): boolean;
-export declare function isActive(ele: any): boolean;
-export declare function hasFocus(ele: any): boolean;
-export declare function isTextInput(ele: any): boolean;
-export declare function hasFocusedTextInput(): boolean;
-export declare function closest(ele: any, selector: any, checkSelf: any): any;
-export declare function removeElement(ele: any): void;
+export  function hasPointerMoved(threshold: any, startCoord: any, endCoord: any): boolean;
+export  function isActive(ele: any): boolean;
+export  function hasFocus(ele: any): boolean;
+export  function isTextInput(ele: any): boolean;
+export  function hasFocusedTextInput(): boolean;
+export  function closest(ele: any, selector: any, checkSelf: any): any;
+export  function removeElement(ele: any): void;
 /**
  * Get the element offsetWidth and offsetHeight. Values are cached
  * to reduce DOM reads. Cache is cleared on a window resize.
  * @param {TODO} ele  TODO
  */
-export declare function getDimensions(ion: any, ele: any): any;
-export declare function windowDimensions(): any;
-export declare function flushDimensionCache(): void;
+export  function getDimensions(ion: any, ele: any): any;
+export  function windowDimensions(): any;
+export  function flushDimensionCache(): void;
 /**
  * returns the closest, non-statically positioned parentOffset of a given element
  * @param element
  */
-export declare function parentOffsetEl(element: any): any;
+export  function parentOffsetEl(element: any): any;
 /**
  * Get the current coordinates of the element, relative to the offset parent.
  * Read-only equivalent of [jQuery's position function](http://api.jquery.com/position/).
  * @param {element} element The element to get the position of.
  * @returns {object} Returns an object containing the properties top, left, width and height.
  */
-export declare function position(element: any): {
+export  function position(element: any): {
     width: any;
     height: any;
     top: number;
@@ -97,7 +99,7 @@ export declare function position(element: any): {
 * @param {element} element The element to get the offset of.
 * @returns {object} Returns an object containing the properties top, left, width and height.
 */
-export declare function offset(element: any): {
+export  function offset(element: any): {
     width: any;
     height: any;
     top: any;
@@ -107,12 +109,12 @@ export declare function offset(element: any): {
 // Source code:
 // util/click-block.d.ts
 
-export declare let ClickBlock: (shouldShow: any, expire: any) => void;
+export  let ClickBlock: (shouldShow: any, expire: any) => void;
 
 // Source code:
 // animations/scroll-to.d.ts
 
-export declare class ScrollTo {
+export  class ScrollTo {
     constructor(ele: any, x: any, y: any, duration: any);
     start(x: any, y: any, duration: any, tolerance: any): any;
     stop(): void;
@@ -126,7 +128,7 @@ export declare class ScrollTo {
  * Component registry service.  For more information on registering
  * components see the [IdRef API reference](../id/IdRef/).
  */
-export declare class IonicApp {
+export  class IonicApp {
     constructor(config: any);
     /**
      * Sets the document title.
@@ -184,7 +186,7 @@ export declare class IonicApp {
 // Source code:
 // util/util.d.ts
 
-export declare function noop(): void;
+export  function noop(): void;
 /**
  * Given a min and max, restrict the given number
  * to the range.
@@ -192,51 +194,51 @@ export declare function noop(): void;
  * @param n the value
  * @param max the maximum
  */
-export declare function clamp(min: any, n: any, max: any): number;
+export  function clamp(min: any, n: any, max: any): number;
 /**
  * Extend the destination with an arbitrary number of other objects.
  * @param dst the destination
  * @param ... the param objects
  */
-export declare function extend(dst: any): any;
+export  function extend(dst: any): any;
 /**
  * Do a deep extend (merge).
  * @param dst the destination
  * @param ... the param objects
  */
-export declare function merge(dst: any): any;
-export declare function debounce(func: any, wait: any, immediate: any): () => any;
+export  function merge(dst: any): any;
+export  function debounce(func: any, wait: any, immediate: any): () => any;
 /**
  * Apply default arguments if they don't exist in
  * the first object.
  * @param the destination to apply defaults to.
  */
-export declare function defaults(dest: any): any;
-export declare const isBoolean: (val: any) => boolean;
-export declare const isString: (val: any) => boolean;
-export declare const isNumber: (val: any) => boolean;
-export declare const isFunction: (val: any) => boolean;
-export declare const isDefined: (val: any) => boolean;
-export declare const isUndefined: (val: any) => boolean;
-export declare const isBlank: (val: any) => boolean;
-export declare const isObject: (val: any) => boolean;
-export declare const isArray: (arg: any) => arg is any[];
-export declare const isTrueProperty: (val: any) => boolean;
+export  function defaults(dest: any): any;
+export  const isBoolean: (val: any) => boolean;
+export  const isString: (val: any) => boolean;
+export  const isNumber: (val: any) => boolean;
+export  const isFunction: (val: any) => boolean;
+export  const isDefined: (val: any) => boolean;
+export  const isUndefined: (val: any) => boolean;
+export  const isBlank: (val: any) => boolean;
+export  const isObject: (val: any) => boolean;
+export  const isArray: (arg: any) => arg is any[];
+export  const isTrueProperty: (val: any) => boolean;
 /**
  * Convert a string in the format thisIsAString to a slug format this-is-a-string
  */
-export declare function pascalCaseToDashCase(str?: string): string;
-export declare function nextUid(): number;
+export  function pascalCaseToDashCase(str?: string): string;
+export  function nextUid(): number;
 /**
  * A simple logger class.
  */
-export declare class Log {
+export  class Log {
     static log(...args: any[]): void;
     static info(...args: any[]): void;
     static warn(...args: any[]): void;
     static error(...args: any[]): void;
 }
-export declare const array: {
+export  const array: {
     find(arr: any, cb: any): any;
     remove(arr: any, itemOrIndex: any): boolean;
 };
@@ -244,12 +246,12 @@ export declare const array: {
  * Grab the query string param value for the given key.
  * @param key the key to look for
  */
-export declare function getQuerystring(url: any, key: any): any;
+export  function getQuerystring(url: any, key: any): any;
 /**
  * Throttle the given fun, only allowing it to be
  * called at most every `wait` ms.
  */
-export declare function throttle(func: any, wait: any, options: any): () => any;
+export  function throttle(func: any, wait: any, options: any): () => any;
 
 // Source code:
 // platform/platform.d.ts
@@ -257,7 +259,7 @@ export declare function throttle(func: any, wait: any, options: any): () => any;
 /**
  * TODO
  */
-export declare class Platform {
+export  class Platform {
     constructor(platforms?: any[]);
     /**
      * @param {string} platformName
@@ -472,7 +474,7 @@ export declare class Platform {
  * http://localhost:8100/?ionicTabbarPlacement=bottom
  * ```
 **/
-export declare class Config {
+export  class Config {
     constructor(config: any);
     /**
      * For setting and getting multiple config values
@@ -531,7 +533,7 @@ export declare class Config {
  13) Call onFinish()
  14) Resolve play()'s promise
 **/
-export declare class Animation {
+export  class Animation {
     constructor(ele: any, opts?: {});
     reset(): void;
     elements(ele: any): Animation;
@@ -581,6 +583,34 @@ export declare class Animation {
     static register(name: any, AnimationClass: any): void;
 }
 
+import {Component, NgZone, Injectable, Renderer} from 'angular2/angular2';
+
+// import {IonicApp} from '../app/app';
+// import {Config} from '../../config/config';
+// import {Animation} from '../../animations/animation';
+// import * as util from 'ionic/util';
+
+
+export class OverlayController {
+
+  constructor(app: IonicApp, config: Config, zone: NgZone, renderer: Renderer);
+
+  open(overlayType, componentType: /*Type*/ any, opts): any;
+
+  close(ref, opts): any;
+
+  add(ref): any;
+
+  remove(ref): any;
+
+  getByType(overlayType): any;
+
+  getByHandle(handle, overlayType): any;
+
+}
+
+export const ROOT_Z_INDEX;
+
 // Source code:
 // util/form.d.ts
 
@@ -595,7 +625,7 @@ export declare class Animation {
  * </ion-input>
  * ```
  */
-export declare class Form {
+export  class Form {
     constructor();
     register(input: any): void;
     deregister(input: any): void;
@@ -612,7 +642,7 @@ export declare class Form {
 // util/keyboard.d.ts
 
 import { NgZone } from 'angular2/angular2';
-export declare class Keyboard {
+export  class Keyboard {
     constructor(config: Config, form: Form, zone: NgZone);
     isOpen(): boolean;
     onClose(callback: any): any;
@@ -624,7 +654,7 @@ export declare class Keyboard {
 // components/icon/icon.d.ts
 
 import { ElementRef, Renderer } from 'angular2/angular2';
-export declare class Icon {
+export  class Icon {
     private elementRef;
     private renderer;
     constructor(elementRef: ElementRef, config: Config, renderer: Renderer);
@@ -645,7 +675,7 @@ export declare class Icon {
 // Source code:
 // components/action-sheet/action-sheet.d.ts
 
-export declare class ActionSheet {
+export  class ActionSheet {
     constructor(ctrl: OverlayController, config: Config);
     /**
      * Create and open a new Action Sheet. This is the
@@ -669,7 +699,7 @@ import { ElementRef, Renderer } from 'angular2/angular2';
 /**
  * TODO
  */
-export declare class Button {
+export  class Button {
     constructor(config: Config, elementRef: ElementRef, renderer: Renderer, type: string);
 }
 
@@ -729,7 +759,7 @@ export declare class Button {
  * }
  * ```
  */
-export declare class Popup {
+export  class Popup {
     constructor(ctrl: OverlayController, config: Config);
     /**
      * TODO
@@ -823,7 +853,7 @@ export declare class Popup {
  * Events is a pub/sub style event system for sending and responding to application-level
  * events across your app.
  */
-export declare class Events {
+export  class Events {
     constructor();
     /**
      * Subscribe to an event topic. Events that get posted to that topic
@@ -859,7 +889,7 @@ export declare class Events {
  * @private
  * Map of possible pages that can be navigated to using an Ionic NavController
  */
-export declare class NavRegistry {
+export  class NavRegistry {
     constructor(pages?: any[]);
     get(pageName: any): any;
     set(page: any): void;
@@ -892,7 +922,7 @@ export declare class NavRegistry {
  * <span>{{ 'Welcome to MyApp' | translate }}
  * ```
  */
-export declare class Translate {
+export  class Translate {
     constructor();
     translations(lang: any, map: any): void;
     setLanguage(lang: any): void;
@@ -904,7 +934,7 @@ export declare class Translate {
 // Source code:
 // util/feature-detect.d.ts
 
-export declare class FeatureDetect {
+export  class FeatureDetect {
     run(window: any, document: any): void;
     has(featureName: any): boolean;
     static add(name: any, fn: any): void;
@@ -913,7 +943,7 @@ export declare class FeatureDetect {
 // Source code:
 // components/tap-click/activator.d.ts
 
-export declare class Activator {
+export  class Activator {
     constructor(app: any, config: any);
     downAction(ev: any, activatableEle: any, pointerX: any, pointerY: any, callback: any): boolean;
     upAction(): void;
@@ -925,7 +955,7 @@ export declare class Activator {
 // Source code:
 // components/tap-click/ripple.d.ts
 
-export declare class RippleActivator extends Activator {
+export  class RippleActivator extends Activator {
     constructor(app: any, config: any);
     downAction(ev: any, activatableEle: any, pointerX: any, pointerY: any): boolean;
     createRipple(activatableEle: any, pointerX: any, pointerY: any, clientRect: any): void;
@@ -940,16 +970,16 @@ export declare class RippleActivator extends Activator {
 /**
  * @private
  */
-export declare function initTapClick(windowInstance: any, documentInstance: any, appInstance: any, config: any): void;
+export  function initTapClick(windowInstance: any, documentInstance: any, appInstance: any, config: any): void;
 /**
  * @private
  */
-export declare function isActivatable(ele: any): boolean;
+export  function isActivatable(ele: any): boolean;
 
 // Source code:
 // config/bootstrap.d.ts
 
-export declare function ionicProviders(args?: {}): any[];
+export  function ionicProviders(args?: {}): any[];
 
 // Source code:
 // components/overlay/overlay.d.ts
@@ -958,7 +988,7 @@ import { ElementRef, DynamicComponentLoader } from 'angular2/angular2';
 /**
  * @private
  */
-export declare class OverlayAnchor {
+export  class OverlayAnchor {
     constructor(overlayCtrl: OverlayController, elementRef: ElementRef, loader: DynamicComponentLoader);
     append(componentType: any): any;
 }
@@ -966,7 +996,7 @@ export declare class OverlayAnchor {
 // Source code:
 // gestures/slide-edge-gesture.d.ts
 
-export declare class SlideEdgeGesture extends SlideGesture {
+export  class SlideEdgeGesture extends SlideGesture {
     constructor(element: Element, opts?: Object);
     canStart(ev?: any): any;
     getContainerDimensions(): {
@@ -1017,7 +1047,7 @@ import { ElementRef } from 'angular2/angular2';
  * <ion-menu [content]="contentRef" type="overlay"></ion-menu>
  * ```
  */
-export declare class Menu extends Ion {
+export  class Menu extends Ion {
     constructor(app: IonicApp, elementRef: ElementRef, config: Config, platform: Platform, keyboard: Keyboard);
     /**
      * @private
@@ -1107,7 +1137,7 @@ export declare class Menu extends Ion {
 // Source code:
 // transitions/transition.d.ts
 
-export declare class Transition {
+export  class Transition {
     static create(navCtrl: any, opts?: {}): any;
     static register(name: any, TransitionClass: any): void;
 }
@@ -1115,7 +1145,7 @@ export declare class Transition {
 // Source code:
 // components/nav/swipe-back.d.ts
 
-export declare class SwipeBackGesture extends SlideEdgeGesture {
+export  class SwipeBackGesture extends SlideEdgeGesture {
     constructor(element: Element, opts: Object, navCtrl: any);
     onSlideStart(): void;
     onSlide(slide?: any, ev?: any): void;
@@ -1216,7 +1246,7 @@ import { Compiler, ElementRef, NgZone, DynamicComponentLoader, AppViewManager, R
  * - `onPageDidUnload` - Runs after the page has been destroyed and its elements have been removed.
  *
  */
-export declare class NavController extends Ion {
+export  class NavController extends Ion {
     constructor(parentnavCtrl: NavController, app: IonicApp, config: Config, elementRef: ElementRef, compiler: Compiler, loader: DynamicComponentLoader, viewManager: AppViewManager, zone: NgZone, renderer: Renderer);
     /**
      * TODO
@@ -1438,7 +1468,7 @@ export declare class NavController extends Ion {
 /**
  * TODO
  */
-export declare class NavParams {
+export  class NavParams {
     /**
      * TODO
      * @param {TODO} data  TODO
@@ -1457,7 +1487,7 @@ export declare class NavParams {
 /**
  * TODO
  */
-export declare class ViewController {
+export  class ViewController {
     constructor(navCtrl: any, componentType: any, params?: {});
     /**
      * TODO
@@ -1533,7 +1563,7 @@ import { ElementRef } from 'angular2/angular2';
 /**
  * TODO
  */
-export declare class ToolbarBase extends Ion {
+export  class ToolbarBase extends Ion {
     constructor(elementRef: ElementRef, config: Config);
     /**
      * @private
@@ -1562,17 +1592,17 @@ export declare class ToolbarBase extends Ion {
 /**
  * TODO
  */
-export declare class Toolbar extends ToolbarBase {
+export  class Toolbar extends ToolbarBase {
     constructor(elementRef: ElementRef, config: Config);
 }
-export declare class ToolbarTitle extends Ion {
+export  class ToolbarTitle extends Ion {
     constructor(elementRef: ElementRef, toolbar: Toolbar, navbar: Navbar);
     getTitleText(): any;
 }
 /**
  * @private
  */
-export declare class ToolbarItem extends Ion {
+export  class ToolbarItem extends Ion {
     constructor(elementRef: ElementRef, toolbar: Toolbar, navbar: Navbar);
 }
 
@@ -1580,7 +1610,7 @@ export declare class ToolbarItem extends Ion {
 // components/navbar/navbar.d.ts
 
 import { ElementRef, Renderer, TemplateRef, ViewContainerRef } from 'angular2/angular2';
-export declare class Navbar extends ToolbarBase {
+export  class Navbar extends ToolbarBase {
     constructor(app: IonicApp, viewCtrl: ViewController, elementRef: ElementRef, config: Config, renderer: Renderer);
     /**
      * @private
@@ -1625,7 +1655,7 @@ export declare class Navbar extends ToolbarBase {
  * content will be moved up to the common navbar location, and created
  * using the same context as the view's content area.
 */
-export declare class NavbarTemplate {
+export  class NavbarTemplate {
     constructor(viewContainerRef: ViewContainerRef, templateRef: TemplateRef, viewCtrl: ViewController);
 }
 
@@ -1636,7 +1666,7 @@ import { ElementRef } from 'angular2/angular2';
 /**
 * TODO
 */
-export declare class MenuToggle extends Ion {
+export  class MenuToggle extends Ion {
     constructor(app: IonicApp, elementRef: ElementRef, viewCtrl: ViewController, navbar: Navbar);
     /**
     * TODO
@@ -1653,7 +1683,7 @@ import { ElementRef } from 'angular2/angular2';
 /**
 * TODO
 */
-export declare class MenuClose extends Ion {
+export  class MenuClose extends Ion {
     constructor(app: IonicApp, elementRef: ElementRef);
     close(): void;
 }
@@ -1662,7 +1692,7 @@ export declare class MenuClose extends Ion {
 // components/blur/blur.d.ts
 
 import { Renderer, ElementRef } from 'angular2/angular2';
-export declare class Blur {
+export  class Blur {
     private elementRef;
     private renderer;
     constructor(elementRef: ElementRef, renderer: Renderer);
@@ -1687,7 +1717,7 @@ import { ElementRef, NgZone } from 'angular2/angular2';
  * ```
  *
  */
-export declare class Content extends Ion {
+export  class Content extends Ion {
     private _zone;
     /**
      * @param {ElementRef} elementRef  A reference to the component's DOM element.
@@ -1768,7 +1798,7 @@ export declare class Content extends Ion {
  *
  * TODO(mlynch): Re-enable the DOM event simulation that was causing issues (or verify hammer does this already, it might);
  */
-export declare class Gesture {
+export  class Gesture {
     constructor(element: any, opts?: {});
     options(opts?: {}): void;
     on(type: any, cb: any): void;
@@ -1786,7 +1816,7 @@ import { ElementRef } from 'angular2/angular2';
  * Scroll is a non-flexboxed scroll area that can scroll horizontally or
  * vertically.
  */
-export declare class Scroll extends Ion {
+export  class Scroll extends Ion {
     constructor(elementRef: ElementRef, Config: Config);
     /**
      * @private
@@ -1835,7 +1865,7 @@ import { ElementRef } from 'angular2/angular2';
  *  }
  *  ```
  */
-export declare class Refresher {
+export  class Refresher {
     /**
      * TODO
      * @param {Content} content  TODO
@@ -1919,7 +1949,7 @@ export declare class Refresher {
 // Source code:
 // components/slides/swiper-widget.d.ts
 
-export declare function Swiper(container: any, params: any): any;
+export  function Swiper(container: any, params: any): any;
 
 // Source code:
 // components/slides/slides.d.ts
@@ -1940,7 +1970,7 @@ import { ElementRef } from 'angular2/angular2';
  * Licensed under MIT
  *
  */
-export declare class Slides extends Ion {
+export  class Slides extends Ion {
     /**
      * TODO
      * @param {ElementRef} elementRef  TODO
@@ -1976,7 +2006,7 @@ export declare class Slides extends Ion {
 /**
  * TODO
  */
-export declare class Slide {
+export  class Slide {
     /**
      * TODO
      * @param {Slides} slides  The containing slidebox.
@@ -1984,7 +2014,7 @@ export declare class Slide {
      */
     constructor(elementRef: ElementRef, slides: Slides);
 }
-export declare class SlideLazy {
+export  class SlideLazy {
     constructor(elementRef: ElementRef);
 }
 
@@ -2018,7 +2048,7 @@ import { AppViewManager, ElementRef, Renderer } from 'angular2/angular2';
  * guarantee that the registered component has not been destroyed if its Page
  * has been navigated away from.
  */
-export declare class IdRef {
+export  class IdRef {
     private app;
     private elementRef;
     private appViewManager;
@@ -2032,7 +2062,7 @@ export declare class IdRef {
      */
     onDestroy(): void;
 }
-export declare class Attr {
+export  class Attr {
     private renderer;
     private elementRef;
     constructor(renderer: Renderer, elementRef: ElementRef);
@@ -2096,7 +2126,7 @@ import { ElementRef } from 'angular2/angular2';
  * of that Tabs component.
  *
  */
-export declare class Tabs extends Ion {
+export  class Tabs extends Ion {
     private platform;
     /**
      * Hi, I'm "Tabs". I'm really just another Page, with a few special features.
@@ -2184,7 +2214,7 @@ import { ElementRef, Compiler, DynamicComponentLoader, AppViewManager, NgZone, R
  * <ion-tabs>
  * ```
  */
-export declare class Tab extends NavController {
+export  class Tab extends NavController {
     constructor(tabs: Tabs, app: IonicApp, config: Config, elementRef: ElementRef, compiler: Compiler, loader: DynamicComponentLoader, viewManager: AppViewManager, zone: NgZone, renderer: Renderer);
     /**
      * @private
@@ -2209,7 +2239,7 @@ export declare class Tab extends NavController {
 // Source code:
 // components/list/virtual.d.ts
 
-export declare class ListVirtualScroll {
+export  class ListVirtualScroll {
     constructor(list: any);
     resize(): void;
     _handleVirtualScroll(event: any): void;
@@ -2219,7 +2249,7 @@ export declare class ListVirtualScroll {
 // Source code:
 // components/item/item-sliding-gesture.d.ts
 
-export declare class ItemSlidingGesture extends DragGesture {
+export  class ItemSlidingGesture extends DragGesture {
     constructor(list: List, listEle: any);
     onDragStart(ev?: any): void;
     onDrag(ev?: any): void;
@@ -2248,7 +2278,7 @@ import { ElementRef, NgZone } from 'angular2/angular2';
  * interaction modes such as swipe to edit, drag to reorder, and removing items.
  *
  */
-export declare class List extends Ion {
+export  class List extends Ion {
     private zone;
     constructor(elementRef: ElementRef, config: Config, zone: NgZone);
     /**
@@ -2274,7 +2304,7 @@ export declare class List extends Ion {
      */
     afterViewInit(): void;
 }
-export declare class ListHeader {
+export  class ListHeader {
 }
 
 // Source code:
@@ -2317,7 +2347,7 @@ export declare class ListHeader {
  *
  *  ```
  */
-export declare class Item {
+export  class Item {
 }
 
 // Source code:
@@ -2327,7 +2357,7 @@ import { ElementRef, NgZone } from 'angular2/angular2';
 /**
  * TODO
  */
-export declare class ItemGroup {
+export  class ItemGroup {
     /**
      * TODO
      * @param {ElementRef} elementRef  TODO
@@ -2337,7 +2367,7 @@ export declare class ItemGroup {
 /**
  * TODO
  */
-export declare class ItemGroupTitle {
+export  class ItemGroupTitle {
     private elementRef;
     private zone;
     private content;
@@ -2372,7 +2402,7 @@ import { ElementRef } from 'angular2/angular2';
  * </ion-list>
  * ```
  */
-export declare class ItemSliding {
+export  class ItemSliding {
     private list;
     constructor(list: List, elementRef: ElementRef);
     close(): void;
@@ -2394,7 +2424,7 @@ import { NgControl, ElementRef } from 'angular2/angular2';
  * </ion-checkbox>
  * ```
  */
-export declare class Checkbox {
+export  class Checkbox {
     constructor(form: Form, ngControl: NgControl, elementRef: ElementRef);
     onInit(): void;
     /**
@@ -2473,7 +2503,7 @@ import { ElementRef, NgControl } from 'angular2/angular2';
  * ```
  *
  */
-export declare class Switch {
+export  class Switch {
     private ngControl;
     constructor(form: Form, elementRef: ElementRef, config: Config, ngControl: NgControl);
     /**
@@ -2522,7 +2552,7 @@ export declare class Switch {
 // Source code:
 // components/text-input/label.d.ts
 
-export declare class Label {
+export  class Label {
     constructor(config: Config, container: TextInput);
     /**
      * @private
@@ -2541,7 +2571,7 @@ import { ElementRef, Renderer } from 'angular2/angular2';
 /**
  * TODO
  */
-export declare class TextInput {
+export  class TextInput {
     constructor(form: Form, elementRef: ElementRef, config: Config, renderer: Renderer, app: IonicApp, platform: Platform, scrollView: Content);
     /**
      * @private
@@ -2613,7 +2643,7 @@ export declare class TextInput {
 /**
  * @private
  */
-export declare class TextInputElement {
+export  class TextInputElement {
     constructor(type: string, elementRef: ElementRef, renderer: Renderer, wrapper: TextInput);
     onKeyup(ev: any): void;
     onInit(): void;
@@ -2662,7 +2692,7 @@ import { Renderer, ElementRef, NgControl } from 'angular2/angular2';
  * </form>
  * ```
  */
-export declare class Segment extends Ion {
+export  class Segment extends Ion {
     /**
      * @private
      */
@@ -2700,7 +2730,7 @@ export declare class Segment extends Ion {
      */
     selected(segmentButton: any): void;
 }
-export declare class SegmentButton {
+export  class SegmentButton {
     constructor(segment: Segment, elementRef: ElementRef, renderer: Renderer);
     /**
      * @private
@@ -2752,7 +2782,7 @@ import { ElementRef, NgControl, QueryList } from 'angular2/angular2';
  * </ion-radio-group>
  * ```
 */
-export declare class RadioGroup extends Ion {
+export  class RadioGroup extends Ion {
     private headerQuery;
     radios: Array<RadioButton>;
     constructor(elementRef: ElementRef, config: Config, ngControl: NgControl, headerQuery: QueryList<ListHeader>);
@@ -2809,7 +2839,7 @@ export declare class RadioGroup extends Ion {
  * ```
  *
  */
-export declare class RadioButton extends Ion {
+export  class RadioButton extends Ion {
     constructor(group: RadioGroup, elementRef: ElementRef, config: Config);
     /**
      * @private
@@ -2839,7 +2869,7 @@ import { ElementRef, NgControl, Renderer } from 'angular2/angular2';
  * <ion-searchbar ng-control="searchQuery"></ion-searchbar>
  * ```
  */
-export declare class SearchBar extends Ion {
+export  class SearchBar extends Ion {
     /**
      * @private
      */
@@ -2971,7 +3001,7 @@ import { ElementRef, NgZone, Compiler, AppViewManager, DynamicComponentLoader, R
  * </div>
  *
  */
-export declare class Nav extends NavController {
+export  class Nav extends NavController {
     constructor(hostNavCtrl: NavController, viewCtrl: ViewController, app: IonicApp, config: Config, elementRef: ElementRef, compiler: Compiler, loader: DynamicComponentLoader, viewManager: AppViewManager, zone: NgZone, renderer: Renderer);
     /**
      * @private
@@ -3016,7 +3046,7 @@ export declare class Nav extends NavController {
  * <button [nav-push]="[pushPage, params]"></button>
  * ```
  */
-export declare class NavPush {
+export  class NavPush {
     /**
      * TODO
      * @param {NavController} nav  TODO
@@ -3027,7 +3057,7 @@ export declare class NavPush {
 /**
  * TODO
  */
-export declare class NavPop {
+export  class NavPop {
     /**
      * TODO
      * @param {NavController} nav  TODO
@@ -3043,7 +3073,7 @@ export declare class NavPop {
  * The core Ionic directives as well as Angular's CORE_DIRECTIVES and
  * FORM_DIRECTIVES.  Automatically available in every [@Page](../Page/) template.
  */
-export declare const IONIC_DIRECTIVES: any[];
+export  const IONIC_DIRECTIVES: any[];
 
 // Source code:
 // config/decorators.d.ts
@@ -3104,15 +3134,15 @@ export declare const IONIC_DIRECTIVES: any[];
  * you may see these tags if you inspect your markup, you don't need to include
  * them in your templates.
  */
-export declare function Page(config?: {}): (cls: any) => any;
+export  function Page(config?: {}): (cls: any) => any;
 /**
  * @private
  */
-export declare function ConfigComponent(config: any): (cls: any) => any;
+export  function ConfigComponent(config: any): (cls: any) => any;
 /**
  * TODO
  */
-export declare function App(args?: {}): (cls: any) => any;
+export  function App(args?: {}): (cls: any) => any;
 
 // Source code:
 // platform/storage/storage.d.ts
@@ -3126,7 +3156,7 @@ export declare function App(args?: {}): (cls: any) => any;
  * for temporary data as it may be "cleaned up" by the operation system
  * during low disk space situations.
  */
-export declare class Storage {
+export  class Storage {
     constructor(strategyCls: StorageEngine, options: any);
     get(key: any): any;
     getJson(key: any): any;
@@ -3134,7 +3164,7 @@ export declare class Storage {
     remove(key: any): any;
     query(query: any, params: any): any;
 }
-export declare class StorageEngine {
+export  class StorageEngine {
     get(key: any, value: any): void;
     set(key: any, value: any): void;
     remove(key: any): void;
@@ -3154,7 +3184,7 @@ export declare class StorageEngine {
  *
  * For guaranteed, long-term storage, use the SqlStorage engine which stores data in a file.
  */
-export declare class LocalStorage extends StorageEngine {
+export  class LocalStorage extends StorageEngine {
     constructor();
     get(key: any): any;
     set(key: any, value: any): any;
@@ -3194,7 +3224,7 @@ export declare class LocalStorage extends StorageEngine {
  * }
  *
  */
-export declare class SqlStorage extends StorageEngine {
+export  class SqlStorage extends StorageEngine {
     static BACKUP_LOCAL: number;
     static BACKUP_LIBRARY: number;
     static BACKUP_DOCUMENTS: number;
@@ -3254,7 +3284,7 @@ import { PipeTransform } from 'angular2/angular2';
  * Translate using a specific language
  * {{ 'Please enter your location' | translate:"de" }}
  */
-export declare class TranslatePipe implements PipeTransform {
+export  class TranslatePipe implements PipeTransform {
     constructor(translate: Translate);
     transform(value: any, args: any): any;
     supports(obj: any): boolean;
@@ -3285,13 +3315,34 @@ export declare class TranslatePipe implements PipeTransform {
 // Source code:
 // util.d.ts
 
-export declare const dom: any;
+export  const dom: any;
 // export * from 'ionic/util/util';
 
+/**
+ * Base class for all Ionic components. Exposes some common functionality
+ * that all Ionic components need, such as accessing underlying native elements and
+ * sending/receiving app-level events.
+ */
+export class Ion {
+  constructor(elementRef: ElementRef, config: Config);
+
+  onInit();
+
+  getElementRef(): any;
+
+  getNativeElement(): any;
+
+  getDimensions(): any;
+
+  width(): any;
+
+  height(): any;
+
+}
 // Source code:
 // gestures/drag-gesture.d.ts
 
-export declare class DragGesture extends Gesture {
+export  class DragGesture extends Gesture {
     constructor(element: any, opts?: {});
     listen(): void;
     onDrag(): void;
@@ -3308,13 +3359,13 @@ export declare class DragGesture extends Gesture {
  * @param {Object} [options]
  * @constructor
  */
-declare function Hammer(element: any, options: any): any;
+function Hammer(element: any, options: any): any;
 export { Hammer };
 
 // Source code:
 // gestures/slide-gesture.d.ts
 
-export declare class SlideGesture extends DragGesture {
+export  class SlideGesture extends DragGesture {
     constructor(element: any, opts?: {});
     getSlideBoundaries(slide: any, ev: any): {
         min: number;
@@ -3340,7 +3391,7 @@ export declare class SlideGesture extends DragGesture {
  * type will provide their own animations for open and close
  * and registers itself with Menu.
  */
-export declare class MenuType {
+export  class MenuType {
     constructor();
     setOpen(shouldOpen: any): any;
     setProgressStart(isOpen: any): void;
@@ -3352,9 +3403,11 @@ export declare class MenuType {
 // Source code:
 // config/test/config.spec.d.ts
 
-export declare function run(): void;
+export  function run(): void;
 
 // Source code:
 // platform/test/platform.spec.d.ts
 
-export declare function run(): void;
+export  function run(): void;
+
+}
