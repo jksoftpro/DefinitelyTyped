@@ -1,8 +1,14 @@
-declare module 'ionic2/ionic2' {
+// import {Component, Injectable, PipeTransform, NgControl, QueryList, ElementRef, 
+//     NgZone, Compiler, AppViewManager, DynamicComponentLoader, Renderer,
+//     TemplateRef, ViewContainerRef} from 'angular2/angular2';
 
-import {Component, Injectable, PipeTransform, NgControl, QueryList, ElementRef, 
-    NgZone, Compiler, AppViewManager, DynamicComponentLoader, Renderer,
-    TemplateRef, ViewContainerRef} from 'angular2/angular2';
+///<reference path="../angular2/angular2-2.0.0-alpha.39.d.ts"/>
+  
+declare module 'ionic2/ionic2' {
+    export = ionic2;
+}
+
+declare module ionic2 {
 
 // Source code:
 // components.d.ts
