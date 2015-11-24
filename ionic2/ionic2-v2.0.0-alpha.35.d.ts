@@ -1,5 +1,8 @@
-
 declare module 'ionic2/ionic2' {
+
+import {Component, Injectable, PipeTransform, NgControl, QueryList, ElementRef, 
+    NgZone, Compiler, AppViewManager, DynamicComponentLoader, Renderer,
+    TemplateRef, ViewContainerRef} from 'angular2/angular2';
 
 // Source code:
 // components.d.ts
@@ -583,8 +586,6 @@ export  class Animation {
     static register(name: any, AnimationClass: any): void;
 }
 
-import {Component, NgZone, Injectable, Renderer} from 'angular2/angular2';
-
 // import {IonicApp} from '../app/app';
 // import {Config} from '../../config/config';
 // import {Animation} from '../../animations/animation';
@@ -641,7 +642,6 @@ export  class Form {
 // Source code:
 // util/keyboard.d.ts
 
-import { NgZone } from 'angular2/angular2';
 export  class Keyboard {
     constructor(config: Config, form: Form, zone: NgZone);
     isOpen(): boolean;
@@ -653,7 +653,6 @@ export  class Keyboard {
 // Source code:
 // components/icon/icon.d.ts
 
-import { ElementRef, Renderer } from 'angular2/angular2';
 export  class Icon {
     private elementRef;
     private renderer;
@@ -695,7 +694,6 @@ export  class ActionSheet {
 // Source code:
 // components/button/button.d.ts
 
-import { ElementRef, Renderer } from 'angular2/angular2';
 /**
  * TODO
  */
@@ -984,7 +982,6 @@ export  function ionicProviders(args?: {}): any[];
 // Source code:
 // components/overlay/overlay.d.ts
 
-import { ElementRef, DynamicComponentLoader } from 'angular2/angular2';
 /**
  * @private
  */
@@ -1011,7 +1008,6 @@ export  class SlideEdgeGesture extends SlideGesture {
 // Source code:
 // components/menu/menu.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * _For basic Menu usage, see the [Menu section](../../../../components/#menus)
  * of the Component docs._
@@ -1155,7 +1151,6 @@ export  class SwipeBackGesture extends SlideEdgeGesture {
 // Source code:
 // components/nav/nav-controller.d.ts
 
-import { Compiler, ElementRef, NgZone, DynamicComponentLoader, AppViewManager, Renderer } from 'angular2/angular2';
 /**
  * _For examples on the basic usage of NavController, check out the [Navigation section](../../../../components/#navigation)
  * of the Component docs._
@@ -1559,7 +1554,6 @@ export  class ViewController {
 // Source code:
 // components/toolbar/toolbar.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * TODO
  */
@@ -1609,7 +1603,6 @@ export  class ToolbarItem extends Ion {
 // Source code:
 // components/navbar/navbar.d.ts
 
-import { ElementRef, Renderer, TemplateRef, ViewContainerRef } from 'angular2/angular2';
 export  class Navbar extends ToolbarBase {
     constructor(app: IonicApp, viewCtrl: ViewController, elementRef: ElementRef, config: Config, renderer: Renderer);
     /**
@@ -1662,7 +1655,6 @@ export  class NavbarTemplate {
 // Source code:
 // components/menu/menu-toggle.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
 * TODO
 */
@@ -1679,7 +1671,6 @@ export  class MenuToggle extends Ion {
 // Source code:
 // components/menu/menu-close.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
 * TODO
 */
@@ -1691,7 +1682,6 @@ export  class MenuClose extends Ion {
 // Source code:
 // components/blur/blur.d.ts
 
-import { Renderer, ElementRef } from 'angular2/angular2';
 export  class Blur {
     private elementRef;
     private renderer;
@@ -1701,7 +1691,6 @@ export  class Blur {
 // Source code:
 // components/content/content.d.ts
 
-import { ElementRef, NgZone } from 'angular2/angular2';
 /**
  * The Content component provides an easy to use content area that can be configured to use Ionic's custom Scroll View, or the built in overflow scrolling of the browser.
  *
@@ -1811,7 +1800,6 @@ export  class Gesture {
 // Source code:
 // components/scroll/scroll.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * Scroll is a non-flexboxed scroll area that can scroll horizontally or
  * vertically.
@@ -1834,7 +1822,6 @@ export  class Scroll extends Ion {
 // Source code:
 // components/scroll/pull-to-refresh.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * Allows you to add pull-to-refresh to an Content component.
  *
@@ -1954,7 +1941,6 @@ export  function Swiper(container: any, params: any): any;
 // Source code:
 // components/slides/slides.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * Slides is a slide box implementation based on Swiper.js
  *
@@ -2021,7 +2007,6 @@ export  class SlideLazy {
 // Source code:
 // components/app/id.d.ts
 
-import { AppViewManager, ElementRef, Renderer } from 'angular2/angular2';
 /**
  * IdRef is an easy way to identify unique components in an app and access them
  * no matter where in the UI heirarchy you are. For example, this makes toggling
@@ -2075,7 +2060,6 @@ export  class Attr {
 // Source code:
 // components/tabs/tabs.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * _For basic Tabs usage, see the [Tabs section](../../../../components/#tabs)
  * of the Component docs._
@@ -2170,7 +2154,6 @@ export  class Tabs extends Ion {
 // Source code:
 // components/tabs/tab.d.ts
 
-import { ElementRef, Compiler, DynamicComponentLoader, AppViewManager, NgZone, Renderer } from 'angular2/angular2';
 /**
  * _For basic Tabs usage, see the [Tabs section](../../../../components/#tabs)
  * of the Component docs._
@@ -2266,7 +2249,6 @@ export  class ItemSlidingGesture extends DragGesture {
 // Source code:
 // components/list/list.d.ts
 
-import { ElementRef, NgZone } from 'angular2/angular2';
 /**
  * The List is a widely used interface element in almost any mobile app, and can include
  * content ranging from basic text all the way to buttons, toggles, icons, and thumbnails.
@@ -2353,7 +2335,6 @@ export  class Item {
 // Source code:
 // components/item/item-group.d.ts
 
-import { ElementRef, NgZone } from 'angular2/angular2';
 /**
  * TODO
  */
@@ -2381,7 +2362,6 @@ export  class ItemGroupTitle {
 // Source code:
 // components/item/item-sliding.d.ts
 
-import { ElementRef } from 'angular2/angular2';
 /**
  * @description
  * Creates a list-item that can easily be swiped,
@@ -2411,7 +2391,6 @@ export  class ItemSliding {
 // Source code:
 // components/checkbox/checkbox.d.ts
 
-import { NgControl, ElementRef } from 'angular2/angular2';
 /**
  * The checkbox is no different than the HTML checkbox input, except it's styled differently
  *
@@ -2469,7 +2448,6 @@ export  class Checkbox {
 // Source code:
 // components/switch/switch.d.ts
 
-import { ElementRef, NgControl } from 'angular2/angular2';
 /**
  * A switch technically is the same thing as an HTML checkbox input, except it looks different and is easier to use on a touch device. Ionic prefers to wrap the checkbox input with the <label> in order to make the entire toggle easy to tap or drag.
  *
@@ -2567,7 +2545,6 @@ export  class Label {
 // Source code:
 // components/text-input/text-input.d.ts
 
-import { ElementRef, Renderer } from 'angular2/angular2';
 /**
  * TODO
  */
@@ -2658,7 +2635,6 @@ export  class TextInputElement {
 // Source code:
 // components/segment/segment.d.ts
 
-import { Renderer, ElementRef, NgControl } from 'angular2/angular2';
 /**
  * @description
  * A Segment is a group of buttons, sometimes known as Segmented Controls, that allow the user to interact with a compact group of a number of controls.
@@ -2745,7 +2721,6 @@ export  class SegmentButton {
 // Source code:
 // components/radio/radio.d.ts
 
-import { ElementRef, NgControl, QueryList } from 'angular2/angular2';
 /**
  * A radio group is a group of radio components.
  *
@@ -2859,7 +2834,6 @@ export  class RadioButton extends Ion {
 // Source code:
 // components/searchbar/searchbar.d.ts
 
-import { ElementRef, NgControl, Renderer } from 'angular2/angular2';
 /**
  * @description
  * The Search Bar service adds an input field which can be used to search or filter items.
@@ -2911,7 +2885,6 @@ export  class SearchBar extends Ion {
 // Source code:
 // components/nav/nav.d.ts
 
-import { ElementRef, NgZone, Compiler, AppViewManager, DynamicComponentLoader, Renderer } from 'angular2/angular2';
 /**
  * _For a quick walkthrough of navigation in Ionic, check out the
  * [Navigation section](../../../../components/#navigation) of the Component
@@ -3273,7 +3246,6 @@ export  class SqlStorage extends StorageEngine {
 // Source code:
 // translation/translate_pipe.d.ts
 
-import { PipeTransform } from 'angular2/angular2';
 /**
  * The Translate pipe makes it easy to translate strings.
  *
